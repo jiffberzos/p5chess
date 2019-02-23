@@ -15,11 +15,18 @@ function Pawn(x, y, color){
 
     this.allowedMove = function(new_x, new_y){
         if (checkCollision(new_x, new_y, this.x, this.y)){
-            if(new_y - this.y == this.direction && new_x == this.x){
+            if(new_y - this.y == this.direction && new_x == this.x ||
+              this.color == "white" && this.y == 1 && new_y - this.y == 2*this.direction && new_x == this.x ||
+              this.color == "black" && this.y == 6 && new_y - this.y == 2*this.direction && new_x == this.x){
               if(checkOccupied(new_x,new_y)){
                 return true;
               }
             }
+        }if(new_y - this.y == this.direction && Math.abs(new_x-this.x)){
+          console.log("diagonal!")
+          if(checkPawnOccupied(new_x,new_y)){
+            return true;
+          }
         }
         return false;
 
