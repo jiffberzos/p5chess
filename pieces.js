@@ -23,7 +23,6 @@ function Pawn(x, y, color){
               }
             }
         }if(new_y - this.y == this.direction && Math.abs(new_x-this.x)){
-          console.log("diagonal!")
           if(checkPawnOccupied(new_x,new_y)){
             return true;
           }
