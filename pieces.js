@@ -8,16 +8,16 @@ function Pawn(x, y, color){
       this.img = blackPawnImg;
     }
     if(this.color == "white"){
-      this.direction = 1;
-    }else{
       this.direction = -1;
+    }else{
+      this.direction = 1;
     }
 
     this.allowedMove = function(new_x, new_y){
         if (checkCollision(new_x, new_y, this.x, this.y)){
             if(new_y - this.y == this.direction && new_x == this.x ||
-              this.color == "white" && this.y == 1 && new_y - this.y == 2*this.direction && new_x == this.x ||
-              this.color == "black" && this.y == 6 && new_y - this.y == 2*this.direction && new_x == this.x){
+              this.color == "white" && this.y == 6 && new_y - this.y == 2*this.direction && new_x == this.x ||
+              this.color == "black" && this.y == 1 && new_y - this.y == 2*this.direction && new_x == this.x){
               if(checkOccupied(new_x,new_y)){
                 return true;
               }

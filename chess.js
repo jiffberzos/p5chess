@@ -75,33 +75,33 @@ function occupied(){
 
 function piecesSetup(){
     for(let i = 0; i<8; i++){
-        pieces[i] = new Pawn(i,1,"white");
+        pieces[i] = new Pawn(i,1,"black");
     }
     for(let i = 16; i<24; i++){
-        pieces[i] = new Pawn(i-16,6,"black");
+        pieces[i] = new Pawn(i-16,6,"white");
     }
 
-    pieces[8] = new Rook(0,0,"white");
-    pieces[9] = new Rook(7,0,"white");
-    pieces[24] = new Rook(0,7, "black");
-    pieces[25] = new Rook(7,7,"black");
+    pieces[8] = new Rook(0,0,"black");
+    pieces[9] = new Rook(7,0,"black");
+    pieces[24] = new Rook(0,7, "white");
+    pieces[25] = new Rook(7,7,"white");
 
 
-    pieces[10] = new Knight(1,0,"white");
-    pieces[11] = new Knight(6,0,"white");
-    pieces[26] = new Knight(1,7,"black");
-    pieces[27] = new Knight(6,7,"black");
+    pieces[10] = new Knight(1,0,"black");
+    pieces[11] = new Knight(6,0,"black");
+    pieces[26] = new Knight(1,7,"white");
+    pieces[27] = new Knight(6,7,"white");
 
 
-    pieces[12] = new Bishop(2,0,"white");
-    pieces[13] = new Bishop(5,0,"white");
-    pieces[28] = new Bishop(2,7,"black");
-    pieces[29] = new Bishop(5,7,"black");
+    pieces[12] = new Bishop(2,0,"black");
+    pieces[13] = new Bishop(5,0,"black");
+    pieces[28] = new Bishop(2,7,"white");
+    pieces[29] = new Bishop(5,7,"white");
 
-    pieces[14] = new Queen(3,0,"white");
-    pieces[15] = new King(4,0,"white");
-    pieces[30] = new Queen(4,7,"black");
-    pieces[31] = new King(3,7,"black");
+    pieces[14] = new Queen(3,0,"black");
+    pieces[15] = new King(4,0,"black");
+    pieces[30] = new Queen(4,7,"white");
+    pieces[31] = new King(3,7,"white");
 
     }
 

@@ -95,7 +95,7 @@ function checkOccupied(x,y){
   for(let i = 0; i < occupied_list.length; i++){
     if(x == occupied_list[i].x && y == occupied_list[i].y){
       if(pieces[i].color != pieces[dragged_index].color){
-        if(!(pieces[i] instanceof Pawn == true && pieces[dragged_index] instanceof Pawn == true )){
+        if(pieces[dragged_index] instanceof Pawn == false ){
           pieces[i].x = 100;
           return true;
           }else{
